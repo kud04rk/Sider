@@ -37,6 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   hive: ^2.2.3
   google_fonts: ^6.1.0
+  font_awesome_flutter: ^10.6.0
+  audioplayers: ^5.2.1
+  yaml: ^3.1.2
 
 dev_dependencies:
   flutter_test:

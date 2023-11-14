@@ -2,11 +2,13 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
+import 'package:sider/src/constants/hive_strings.dart';
+
 
 void main() async {
   var path = Directory.current.path;
   Hive.init(path);
-  Hive.openBox('Settings');
+  Hive.openBox(HiveBoxes.settings);
 
 
   runApp(const MyApp());
