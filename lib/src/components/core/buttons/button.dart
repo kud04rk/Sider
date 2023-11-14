@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sider/src/utils/extensions.dart';
 
 import '../../../styles/text_styles.dart';
 import '../../../styles/values.dart';
@@ -50,39 +51,29 @@ class Button extends StatelessWidget {
               width: 4.0,
             ),
           ),
-          child: outline ? Text(
-            text,
-            textAlign: TextAlign.center,
-            style: focus ?  TextStyle(
-              fontWeight: FontWeight.w700,
-              letterSpacing: 0.8,
-              fontSize: 1.7 * Values.em,
-              color: Colors.white60,
-            ): TextStyle(
-              fontWeight: FontWeight.w700,
-              letterSpacing: 0.8,
-              fontSize: Values.em,
-              color: color,
-            ),
-          ): Text(
-            text,
-            textAlign: TextAlign.center,
-            style: focus ?  TextStyle(
-              fontWeight: FontWeight.w700,
-              letterSpacing: 0.8,
-              fontSize: 1.7 * Values.em,
-              color: Colors.white60,
-            ): TextStyle(
-              fontWeight: FontWeight.w700,
-              letterSpacing: 0.8,
-              fontSize: Values.em,
-              color: Colors.white60,
-            ),
-          ),
+          child: child(context),
         ),
       ),
     );
   }
+
+child(context) {
+  TextStyle ts;
+  ts = TextStyles.button;
+
+  if (outline) ts = TextStyles.button.c(color);
+
+  // increased font size of focus
+  if (focus) ts = TextStyles.button.s(1.7 * Values.em);
+
+  return Text(
+    text,
+    style: ts,
+    textAlign: TextAlign.center,
+  );
 }
+}
+
+
 
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sider/src/styles/values.dart';
-
+import 'package:sider/src/utils/extensions.dart';
 
 class TextStyles {
   /// main font size
@@ -30,6 +30,9 @@ class TextStyles {
     ),
   );
 
+  // pack name (only in choice.dart)
+  static TextStyle get packName => body1 //
+      .w(FontWeight.w700);
 
   // pack description text (used only in choice.dart for the buttons)
   static TextStyle get packDescription => GoogleFonts.rubik(
@@ -75,4 +78,17 @@ class TextStyles {
     ),
   );
 
+  static TextStyle get loadingText => body1 //
+      .w(FontWeight.w700)
+      .s(1.3 * em);
+
+  static TextStyle get loadingSubText => body1 //
+      .w(FontWeight.w400);
+
+  static TextStyle get settings => body1 //
+      .s(1.2 * Values.em);
+
+  static TextStyle get settingExplanation => body1 //
+      .s(0.9 * Values.em)
+      .w(FontWeight.normal);
 }
