@@ -2,14 +2,20 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
+import 'package:provider/provider.dart';
+import 'package:sider/src/app.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:sider/src/constants/hive_strings.dart';
+import 'package:sider/src/providers/card_provider.dart';
+import 'package:sider/src/providers/game_provider.dart';
+import 'package:sider/src/providers/packs_provider.dart';
+import 'package:sider/src/providers/settings_provider.dart';
+import 'package:sider/src/providers/stopwatch_provider.dart';
 
 
 void main() async {
-  var path = Directory.current.path;
-  Hive.init(path);
-  Hive.openBox(HiveBoxes.settings);
-
+  await Hive.initFlutter();
+  await Hive.openBox(HiveBoxes.settings);
 
   runApp(const MyApp());
 }

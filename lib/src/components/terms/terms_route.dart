@@ -1,7 +1,11 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:sider/src/utils/extensions.dart';
+
+import '../../constants/strings.dart';
 
 class TermsRoute extends StatelessWidget {
-  const ({super.key});
+  const TermsRoute({required Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

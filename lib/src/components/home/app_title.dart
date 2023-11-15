@@ -1,9 +1,11 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
+import '../../constants/strings.dart';
 import '../../styles/text_styles.dart';
 
+
 class AppTitle extends StatelessWidget {
-   @override
+  @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,

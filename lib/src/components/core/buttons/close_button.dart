@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'package:auto_route/auto_route.dart';
 import '../../../services/sound_service.dart';
 import '../../../styles/text_styles.dart';
 import '../../../styles/values.dart';
