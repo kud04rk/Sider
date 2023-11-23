@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import '../../constants/strings.dart';
+import '../../services/tutorial_service.dart';
 import '../../styles/colors.dart';
 import '../../styles/values.dart';
 import '../core/buttons/button.dart';

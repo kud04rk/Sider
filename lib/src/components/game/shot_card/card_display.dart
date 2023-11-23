@@ -8,7 +8,7 @@ import '../../../styles/values.dart';
 
 
 class CardDisplay extends StatelessWidget {
-  const CardDisplay({required Key key, required this.shotCard}) : super(key: key);
+  const CardDisplay({Key? key, required this.shotCard}) : super(key: key);
   final ShotCard shotCard;
 
   @override

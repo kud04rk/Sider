@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:sider/src/utils/extensions.dart';
+import 'package:sider/src/components/core/scrollable_template.dart';
 
 import '../../constants/strings.dart';
 

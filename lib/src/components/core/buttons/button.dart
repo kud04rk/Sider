@@ -7,7 +7,7 @@ import '../../../styles/values.dart';
 class Button extends StatelessWidget {
   const Button({super.key,
     required this.text,
-    this.color,
+    required this.color,
     required this.onTap,
     this.width,
     this.outline= false,
@@ -17,7 +17,7 @@ class Button extends StatelessWidget {
 
 
   final String text;
-  final Color? color;
+  final Color color;
   final Function onTap;
   final double? width;
   final bool outline;
