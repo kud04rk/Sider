@@ -14,6 +14,7 @@ import '../../providers/card_provider.dart';
 import '../../providers/game_provider.dart';
 import '../../services/tutorial_service.dart';
 import '../../styles/values.dart';
+import '../core/buttons/close_button.dart';
 import 'end_alert.dart';
 
 class GameRoute extends StatelessWidget {

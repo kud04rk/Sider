@@ -18,14 +18,14 @@ class SwipeableWidgetSlide extends StatelessWidget {
 
   /// Required, this is the actual card that can be swiped
   final Widget child;
-  final List nextCards;
+  final List? nextCards;
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Stack(
         children: <Widget>[
-          ...nextCards,
+          ...?nextCards,
           _topCard(),
         ],
       ),

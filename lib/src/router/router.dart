@@ -2,18 +2,22 @@
 
 import 'package:auto_route/auto_route.dart';
 
-@MaterialAutoRouter()
+import '../components/home/home_route.dart';
+import '../components/packs/packs_route.dart';
+import '../components/settings/settings_route.dart';
+import '../components/terms/terms_route.dart';
+import '../components/game/game_route.dart';
+
+@AutoRouterConfig()
 class $Router {
-  @initial
-  @CupertinoRoute(fullscreenDialog: true)
-  HomeRoute homeRoute;
+  late HomeRoute homeRoute;
 
-  PacksRoute packsRoute;
+  late PacksRoute packsRoute;
 
-  @CupertinoRoute(fullscreenDialog: true)
-  GameRoute gameRoute;
 
-  TermsRoute termsRoute;
+  late GameRoute gameRoute;
 
-  SettingsRoute settingsRoute;
+  late TermsRoute termsRoute;
+
+  late SettingsRoute settingsRoute;
 }

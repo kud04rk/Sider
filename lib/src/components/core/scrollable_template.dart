@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:sider/src/components/core/spacing.dart';
+import 'package:sider/src/components/core/title_text.dart';
 import 'package:sider/src/utils/extensions.dart';
 
 import '../../styles/colors.dart';
 import '../../styles/values.dart';
+import 'buttons/close_button.dart';
 
 
 class ScrollableTemplate extends StatelessWidget {
@@ -42,7 +44,7 @@ class ScrollableTemplate extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              TitleText(text: title),
+              TitleText(text: title!),
               Spacing(height: Values.mainPadding),
             ],
           ).sliver(),

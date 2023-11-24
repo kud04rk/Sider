@@ -5,6 +5,7 @@ import 'package:hive/hive.dart';
 import 'package:sider/src/styles/colors.dart';
 import 'package:sider/src/styles/theme.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:sider/src/utils/bounce_scroll.dart';
 import 'constants/hive_strings.dart';
 
 class App extends StatelessWidget {

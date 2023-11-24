@@ -4,12 +4,14 @@ import 'package:provider/provider.dart';
 import '../../../models/card_model.dart';
 import '../../../providers/card_provider.dart';
 import '../../../providers/settings_provider.dart';
+import '../../core/swipeable_card/swipeable.dart';
+import '../../core/swipeable_card/swipeable_slide.dart';
 import 'card_display.dart';
 
 class ShotCardParent extends StatelessWidget {
-  const ({super.key});
-  final ShotCard shotCard;
-  final List<Widget> nextCards;
+  const ShotCardParent({Key? key,  this.shotCard,  this.nextCards}) : super(key: key);
+   final ShotCard? shotCard;
+   final List<Widget>? nextCards;
 
   @override
   Widget build(BuildContext context) {
@@ -40,5 +42,11 @@ class ShotCardParent extends StatelessWidget {
   // nextCards: nextCards,
   nextCards: nextCards,
   );
+  }
+
+  void nextCard(BuildContext context) {
+    // get the next card ready
+    final cardProvider = Provider.of<CardProvider>(context, listen: false);
+    cardProvider.nextCard();
   }
 }

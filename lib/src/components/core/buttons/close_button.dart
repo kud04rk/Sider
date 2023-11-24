@@ -6,15 +6,15 @@ import '../../../services/sound_service.dart';
 import '../../../styles/text_styles.dart';
 import '../../../styles/values.dart';
 
-class CloseButton extends StatelessWidget {
-  const CloseButton({super.key,
-    required this.iconData,
-    required this.color,
-    required this.overrideOnTap});
+class AppCloseButton extends StatelessWidget {
+  const AppCloseButton({super.key,
+    this.iconData,
+    this.color,
+    this.overrideOnTap});
 
-  final IconData iconData;
-  final Color color;
-  final Function overrideOnTap;
+  final IconData? iconData;
+  final Color? color;
+  final Function? overrideOnTap;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class CloseButton extends StatelessWidget {
         if (overrideOnTap == null)
           ExtendedNavigator.ofRouter<Router>().pop();
         else
-          overrideOnTap();
+          overrideOnTap!();
 
         // play pop button sound
         SoundService.pop(secondary: true);

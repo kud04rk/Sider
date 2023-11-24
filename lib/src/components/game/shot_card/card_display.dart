@@ -8,8 +8,8 @@ import '../../../styles/values.dart';
 
 
 class CardDisplay extends StatelessWidget {
-  const CardDisplay({Key? key, required this.shotCard}) : super(key: key);
-  final ShotCard shotCard;
+  const CardDisplay({Key? key, this.shotCard}) : super(key: key);
+  final ShotCard? shotCard;
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +21,9 @@ class CardDisplay extends StatelessWidget {
     // 1.4375 is the ratio of the height to the width
 
     return Transform.translate(
-      offset: shotCard.offset ?? Offset(0, 0),
+      offset: shotCard?.offset ?? Offset(0, 0),
       child: Transform.rotate(
-        angle: shotCard.rotateAngle ?? 0,
+        angle: shotCard?.rotateAngle ?? 0,
         child: Container(
           height: _cardHeight,
           width: _cardwidth,
@@ -34,7 +34,7 @@ class CardDisplay extends StatelessWidget {
                 : Values.mainPadding,
           ),
           decoration: BoxDecoration(
-            color: shotCard.color,
+            color: shotCard?.color,
             borderRadius: BorderRadius.circular(Values.borderRadius * 2),
             border: Border.all(
               width: Values.mainPadding / 2.5,
@@ -61,7 +61,7 @@ class CardDisplay extends StatelessWidget {
             children: <Widget>[
               // line1 is there for all cards
               Text(
-                shotCard.line1 ?? "",
+                shotCard?.line1 ?? "",
                 style: TextStyles.cardLine1.s(
                   // reduce font size to a fraction if on a small screen
                   screenSmall
@@ -72,10 +72,10 @@ class CardDisplay extends StatelessWidget {
                 textScaleFactor: 1.0,
               ),
               // line2 is optional
-              if (shotCard.line2 != null) ...[
+              if (shotCard?.line2 != null) ...[
                 Flexible(flex: 1, child: Container()),
                 MarkdownBody(
-                  data: shotCard.line2 ?? "",
+                  data: shotCard?.line2 ?? "",
                   styleSheet: MarkdownStyleSheet(
                     p: TextStyles.cardLine2.s(
                       // again, reduce font size on smaller screens
