@@ -7,6 +7,7 @@ import '../providers/card_provider.dart';
 import '../providers/game_provider.dart';
 import '../providers/packs_provider.dart';
 import '../providers/stopwatch_provider.dart';
+import '../router/router.gr.dart';
 
 
 class GameService {
@@ -38,7 +39,8 @@ class GameService {
     stopwatchProvider.start();
 
     // go to game routes to start game
-    ExtendedNavigator.of(context).pushNamed(Routes.gameRoute);
+
+    AutoRouter.of(context).push(const GameRoute());
   }
 
   /// Execute all functions required for the game to end
@@ -69,8 +71,6 @@ class GameService {
     // go to game routes to home page
     // popping first time to go back to pack selection screen
     // second time to go to main screen
-    ExtendedNavigator.ofRouter<Router>().popUntil(
-      (ModalRoute.withName(Routes.homeRoute)),
-    );
+    AutoRouter.of(context).pop(const HomeRoute());
   }
 }

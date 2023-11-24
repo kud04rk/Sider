@@ -1,3 +1,4 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:provider/provider.dart';
@@ -10,6 +11,8 @@ import '../../styles/values.dart';
 import '../core/scrollable_template.dart';
 import 'on_off_toggle.dart';
 
+
+@RoutePage()
 class SettingsRoute extends StatelessWidget {
   const SettingsRoute({super.key});
 

@@ -1,3 +1,4 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 
 import '../../styles/colors.dart';
@@ -6,7 +7,7 @@ import '../core/spacing.dart';
 import 'app_title.dart';
 import 'home_options.dart';
 
-
+@RoutePage()
 class HomeRoute extends StatelessWidget {
   const HomeRoute({ Key? key}) : super(key: key);
 

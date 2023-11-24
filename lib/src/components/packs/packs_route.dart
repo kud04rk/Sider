@@ -1,3 +1,4 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -14,6 +15,8 @@ import '../core/scrollable_template.dart';
 import 'bottom_bar.dart';
 import 'choice.dart';
 
+
+@RoutePage()
 class PacksRoute extends StatelessWidget {
   const PacksRoute({super.key});
 

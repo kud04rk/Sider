@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import '../../constants/strings.dart';
+import '../../router/router.gr.dart';
 import '../../services/tutorial_service.dart';
 import '../../styles/colors.dart';
 import '../../styles/values.dart';
@@ -26,7 +27,7 @@ class HomeOptions extends StatelessWidget {
             color: AppColors.accent,
             width: 200.0,
             focus: true,
-            onTap: () => ExtendedNavigator.of(context).pushNamed(Routes.packsRoute),
+            onTap: () => AutoRouter.of(context).pop(const PacksRoute()),
           ),
 
           // spacing to make it look cleaner
@@ -36,7 +37,7 @@ class HomeOptions extends StatelessWidget {
             text: AppStrings.termsRouteTitle,
             // outline: true,
             color: AppColors.greens[0],
-            onTap: () => ExtendedNavigator.of(context).pushNamed(Routes.termsRoute),
+            onTap: () => AutoRouter.of(context).pop(const TermsRoute()),
           ),
 
           // spacing to make it look cleaner
@@ -46,7 +47,7 @@ class HomeOptions extends StatelessWidget {
             text: AppStrings.settingsRouteButton,
             // outline: true,
             color: AppColors.reds[0],
-            onTap: () => ExtendedNavigator.of(context).pushNamed(Routes.settingsRoute),
+            onTap: () => AutoRouter.of(context).pop(const SettingsRoute()),
           ),
 
           // spacing to make it look cleaner

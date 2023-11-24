@@ -2,22 +2,18 @@
 
 import 'package:auto_route/auto_route.dart';
 
-import '../components/home/home_route.dart';
-import '../components/packs/packs_route.dart';
-import '../components/settings/settings_route.dart';
-import '../components/terms/terms_route.dart';
-import '../components/game/game_route.dart';
+import 'router.gr.dart';
 
 @AutoRouterConfig()
-class $Router {
-  late HomeRoute homeRoute;
+class AppRouter extends $AppRouter {
 
-  late PacksRoute packsRoute;
-
-
-  late GameRoute gameRoute;
-
-  late TermsRoute termsRoute;
-
-  late SettingsRoute settingsRoute;
+  @override
+  // TODO: implement routes
+  List<AutoRoute> get routes => [
+    AutoRoute(page: HomeRoute.page, initial: true),
+    AutoRoute(page: GameRoute.page),
+    AutoRoute(page: TermsRoute.page),
+    AutoRoute(page: SettingsRoute.page),
+    AutoRoute(page: PacksRoute.page)
+  ];
 }

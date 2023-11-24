@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hive/hive.dart';
+import 'package:sider/src/router/router.dart';
 import 'package:sider/src/styles/colors.dart';
 import 'package:sider/src/styles/theme.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -9,7 +10,8 @@ import 'package:sider/src/utils/bounce_scroll.dart';
 import 'constants/hive_strings.dart';
 
 class App extends StatelessWidget {
-  const App({super.key});
+  App({super.key});
+  AppRouter appRouter = AppRouter();
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +43,9 @@ class App extends StatelessWidget {
 
             return ScrollConfiguration(
               behavior: BounceScrollBehavior(),
-              child: ExtendedNavigator<Router>(router: Router()),
+              child: MaterialApp.router(
+                routerConfig: appRouter.config(),
+              ),
             );
             // return  ExtendedNavigator<Router>(router: Router());
           },

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class SwipeableWidgetSlide extends StatelessWidget {
   const SwipeableWidgetSlide({
-    required Key key,
+    Key? key,
     this.onLeftSwipe,
     this.onRightSwipe,
     this.onTopSwipe,
@@ -39,7 +39,7 @@ class SwipeableWidgetSlide extends StatelessWidget {
       // Using a dismissible instead of animations may give better performance
       // especially on lower end devices
       child: Dismissible(
-        key: key,
+        key: UniqueKey(),
         direction: DismissDirection.vertical,
         onDismissed: (DismissDirection dir) {
           if (dir == DismissDirection.up) onTopSwipe!();
@@ -49,7 +49,7 @@ class SwipeableWidgetSlide extends StatelessWidget {
         // nesting another dismissible so we can get vertical and horizontal
         // dismiss directions
         child: Dismissible(
-          key: key,
+          key: UniqueKey(),
           direction: DismissDirection.horizontal,
           onDismissed: (DismissDirection dir) {
             if (dir == DismissDirection.startToEnd) onRightSwipe!();

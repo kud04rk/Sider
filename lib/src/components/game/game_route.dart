@@ -1,3 +1,4 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -17,6 +18,8 @@ import '../../styles/values.dart';
 import '../core/buttons/close_button.dart';
 import 'end_alert.dart';
 
+
+@RoutePage()
 class GameRoute extends StatelessWidget {
   // controller required to programmatically open sliding panel
   final PanelController _panelController = PanelController();

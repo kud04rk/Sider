@@ -1,9 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../constants/tutorial_cards.dart';
 import '../providers/card_provider.dart';
 import '../providers/game_provider.dart';
+import '../router/router.gr.dart';
 
 /*
 For the tutorial, we are starting a "mock" game. The same game route is used,
@@ -26,7 +28,7 @@ class TutorialService {
     gameProvider.isTutorial = true;
 
     // use the same game route
-    ExtendedNavigator.of(context).pushNamed(Routes.gameRoute);
+    AutoRouter.of(context).push(const GameRoute());
   }
 
   static endTutorial(BuildContext context) {
@@ -48,9 +50,8 @@ class TutorialService {
     and we can put a thank you for viewing the tutorial message
     */
     Future.delayed(Duration(milliseconds: 500)).then((_) {
-      ExtendedNavigator.ofRouter<Router>().popUntil(
-        (ModalRoute.withName(Routes.homeRoute)),
-      );
+          AutoRouter.of(context).pop(const HomeRoute());
+
     });
   }
 }
