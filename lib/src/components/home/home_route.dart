@@ -8,7 +8,7 @@ import 'home_options.dart';
 
 
 class HomeRoute extends StatelessWidget {
-  const HomeRoute({Key key}) : super(key: key);
+  const HomeRoute({ Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

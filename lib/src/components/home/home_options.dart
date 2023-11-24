@@ -10,7 +10,7 @@ import '../core/spacing.dart';
 
 /// Contains buttons to start game, see terms, or tutorial
 class HomeOptions extends StatelessWidget {
-  const HomeOptions({required Key key}) : super(key: key);
+  const HomeOptions({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

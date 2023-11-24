@@ -44,6 +44,7 @@ dependencies:
   auto_route: ^7.8.4
   hive_flutter: ^1.1.0
   flutter_markdown: ^0.6.18+2
+  sliding_up_panel: ^2.0.0+1
 
 dev_dependencies:
   flutter_test:

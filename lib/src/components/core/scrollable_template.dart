@@ -7,9 +7,9 @@ import '../../styles/values.dart';
 
 
 class ScrollableTemplate extends StatelessWidget {
-  final List<Widget> children;
+  final List<Widget>? children;
   final bool showBackButton;
-  final String title;
+  final String? title;
 
   ScrollableTemplate({@required this.children, this.showBackButton = false, this.title});
 
@@ -47,7 +47,7 @@ class ScrollableTemplate extends StatelessWidget {
             ],
           ).sliver(),
 
-        ...children,
+        ...?children,
       ]),
     );
   }

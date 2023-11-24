@@ -13,7 +13,7 @@ import '../../end_alert.dart';
 
 
 class OptionsSection extends StatelessWidget {
-  const OptionsSection({required Key key, required this.overrideTitle}) : super(key: key);
+  const OptionsSection({Key? key, required this.overrideTitle}) : super(key: key);
   final String overrideTitle;
 
   @override

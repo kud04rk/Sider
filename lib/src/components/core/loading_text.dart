@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import '../../styles/text_styles.dart';
 
 class LoadingText extends StatelessWidget {
-  const LoadingText({required Key key, required this.text}) : super(key: key);
+  const LoadingText({Key? key, required this.text}) : super(key: key);
   final String text;
 
   @override
