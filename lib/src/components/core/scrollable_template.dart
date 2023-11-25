@@ -9,11 +9,11 @@ import 'buttons/close_button.dart';
 
 
 class ScrollableTemplate extends StatelessWidget {
-  final List<Widget>? children;
+  final List<Widget> children;
   final bool showBackButton;
   final String? title;
 
-  ScrollableTemplate({@required this.children, this.showBackButton = false, this.title});
+  const ScrollableTemplate({super.key, required this.children, this.showBackButton = false, this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class ScrollableTemplate extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Spacing(height: Values.mainPadding),
-                AppCloseButton(),
+                const AppCloseButton(),
               ]).sliver(),
 
         // some spacing so the content doesn't touch the top of the screen
@@ -49,7 +49,7 @@ class ScrollableTemplate extends StatelessWidget {
             ],
           ).sliver(),
 
-        ...?children,
+        ...children,
       ]),
     );
   }

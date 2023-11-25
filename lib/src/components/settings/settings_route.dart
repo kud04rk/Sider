@@ -32,9 +32,9 @@ class SettingsRoute extends StatelessWidget {
           onTap: () {
             SettingsProvider settingsProvider =
             Provider.of<SettingsProvider>(context, listen: false);
-            if (settingsProvider.nsfw)
+            if (settingsProvider.nsfw) {
               SettingsService.disableNsfw();
-            else
+            } else
               SettingsService.enableNsfw();
           },
         ).sliver(),
@@ -49,10 +49,11 @@ class SettingsRoute extends StatelessWidget {
           onTap: () {
             SettingsProvider settingsProvider =
             Provider.of<SettingsProvider>(context, listen: false);
-            if (settingsProvider.highPerformanceAnimation)
+            if (settingsProvider.highPerformanceAnimation) {
               SettingsService.disableHighPerformanceAnimations();
-            else
+            } else {
               SettingsService.enableHighPerformanceAnimations();
+            }
           },
         ).sliver(),
         explanation(AppStrings.performanceExplanation),

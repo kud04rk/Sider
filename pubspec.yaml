@@ -73,6 +73,13 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+  - icons/android.png
+
+  - assets/packs/
+  - assets/sounds/pop/secondary/
+  - assets/sounds/pop/primary/
+  - assets/metadata.yml
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

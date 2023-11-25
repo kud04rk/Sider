@@ -24,10 +24,13 @@ class GameRoute extends StatelessWidget {
   // controller required to programmatically open sliding panel
   final PanelController _panelController = PanelController();
 
+  GameRoute({super.key});
+
   @override
   Widget build(BuildContext context) {
     // tell game provider if this is a tutorial "game" or not
     final GameProvider gameProvider = Provider.of<GameProvider>(context, listen: false);
+
 
     // including this here to change the background color
     final CardProvider cardProvider = Provider.of<CardProvider>(context, listen: true);
@@ -38,10 +41,13 @@ class GameRoute extends StatelessWidget {
     // If there is no top card, this returns null
     bool currentCardExists;
 
+
     try {
       currentCard = cardProvider.cards[cardProvider.currentCardIndex];
       currentCardExists = true;
+
     } catch (e) {
+
       currentCard = null;
       currentCardExists = false;
     }
@@ -53,9 +59,9 @@ class GameRoute extends StatelessWidget {
       TutorialService.endTutorial(context);
     }
 
+
     return Scaffold(
       backgroundColor: Colors.black,
-
       // see [_slidingUpPanel] to see how the sliding up panel is coming about
       body: SlidingPanel(
         // if there no cards left, hide the sliding panel because all of its contents

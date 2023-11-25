@@ -14,6 +14,7 @@ class OnOffToggle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: onTap,
       child: Container(
         margin: EdgeInsets.only(bottom: Values.mainPadding),
         child: Row(
@@ -61,7 +62,6 @@ class OnOffToggle extends StatelessWidget {
           ],
         ),
       ),
-      onTap: onTap,
     );
   }
 

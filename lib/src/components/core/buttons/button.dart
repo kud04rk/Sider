@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sider/src/utils/extensions.dart';
 
+import '../../../services/sound_service.dart';
 import '../../../styles/text_styles.dart';
 import '../../../styles/values.dart';
 
@@ -54,6 +55,17 @@ class Button extends StatelessWidget {
           child: child(context),
         ),
       ),
+      onTap: () {
+        // if button disabled, tapping shouldn't do anything
+        if (disabled) {
+          SoundService.pop(secondary: true);
+        } else {
+          onTap();
+
+          // play pop button sound
+          SoundService.pop();
+        }
+      },
     );
   }
 

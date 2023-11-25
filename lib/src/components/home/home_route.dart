@@ -24,7 +24,7 @@ class HomeRoute extends StatelessWidget {
 
       Expanded(child: Container()),
 
-      HomeOptions(),
+      const HomeOptions(),
 
       // more spacing so it doesn't touch the bottom of the screen
       // Spacing(height: heightUnit),

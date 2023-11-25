@@ -31,9 +31,9 @@ class PacksRoute extends StatelessWidget {
           FutureBuilder(
             future: loadPacks(context),
             builder: (BuildContext context, AsyncSnapshot snapshot) {
-              if (!snapshot.hasData)
-                return LoadingText(text: "Loading packs ...").sliver();
-              else
+              if (!snapshot.hasData) {
+                return const LoadingText(text: "Loading packs ...").sliver();
+              } else {
                 return SliverList(
                   delegate: SliverChildBuilderDelegate(
                         (BuildContext context, int index) {
@@ -42,6 +42,7 @@ class PacksRoute extends StatelessWidget {
                     childCount: snapshot.data.length,
                   ),
                 );
+              }
             },
           ),
         ],

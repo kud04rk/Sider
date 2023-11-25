@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hive/hive.dart';
+import 'package:provider/provider.dart';
+import 'package:sider/src/providers/settings_provider.dart';
 import 'package:sider/src/router/router.dart';
 import 'package:sider/src/styles/colors.dart';
 import 'package:sider/src/styles/theme.dart';
@@ -34,7 +36,7 @@ class App extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: appTheme,
-          builder: (BuildContext context, Widget widget) {
+          builder: (BuildContext context, Widget? widget) {
             // load settings
             final settingsProvider =
             Provider.of<SettingsProvider>(context, listen: false);

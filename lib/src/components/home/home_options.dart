@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import '../../constants/strings.dart';
@@ -27,7 +29,7 @@ class HomeOptions extends StatelessWidget {
             color: AppColors.accent,
             width: 200.0,
             focus: true,
-            onTap: () => AutoRouter.of(context).pop(const PacksRoute()),
+              onTap: () => AutoRouter.of(context).push(const PacksRoute()),
           ),
 
           // spacing to make it look cleaner
@@ -37,7 +39,7 @@ class HomeOptions extends StatelessWidget {
             text: AppStrings.termsRouteTitle,
             // outline: true,
             color: AppColors.greens[0],
-            onTap: () => AutoRouter.of(context).pop(const TermsRoute()),
+            onTap: () => AutoRouter.of(context).push(const TermsRoute()),
           ),
 
           // spacing to make it look cleaner
@@ -47,7 +49,7 @@ class HomeOptions extends StatelessWidget {
             text: AppStrings.settingsRouteButton,
             // outline: true,
             color: AppColors.reds[0],
-            onTap: () => AutoRouter.of(context).pop(const SettingsRoute()),
+            onTap: () => AutoRouter.of(context).push(const SettingsRoute()),
           ),
 
           // spacing to make it look cleaner

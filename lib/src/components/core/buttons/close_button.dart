@@ -36,7 +36,7 @@ class AppCloseButton extends StatelessWidget {
       onTap: () {
         // go to previous page
         if (overrideOnTap == null)
-          ExtendedNavigator.ofRouter<Router>().pop();
+        AutoRouter.of(context).pop();
         else
           overrideOnTap!();
 
