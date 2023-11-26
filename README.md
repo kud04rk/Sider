@@ -1,16 +1,15 @@
-# sider
+# Sider
 
-A new Flutter project.
+Sider is a flutter app developed as a social game that can be played with a gorup, close people. This game is a created because i was bored with the party cards. Because the party cards are not static can't be updated.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Currently this app is not in play store or app store and in prototyping stage. This app will be released on the play store in the near future.
 
-A few resources to get you started if this is your first Flutter project:
+### Alternatively
+You can use the above code to create a version of the app that can be used immedetiatly.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Features comming soon
+Adding user created chalenges.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Adding games for people to participate.
