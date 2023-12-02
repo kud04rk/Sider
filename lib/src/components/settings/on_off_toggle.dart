@@ -1,15 +1,17 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:sider/src/utils/extensions.dart';
 
 import '../../styles/colors.dart';
 import '../../styles/text_styles.dart';
 import '../../styles/values.dart';
 
 class OnOffToggle extends StatelessWidget {
-  const OnOffToggle({Key? key, required this.title, this.enabled = false, this.onTap})
+  const OnOffToggle({Key? key, required this.title, this.enabled =false, this.onTap})
       : super(key: key);
   final String title;
   final bool enabled;
-  final VoidCallback? onTap;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +44,11 @@ class OnOffToggle extends StatelessWidget {
                         bottomLeft: Radius.circular(Values.borderRadius),
                       ),
                     ),
-                    child: Text("On"),
+                    child: Text(
+                      "On",
+                      style: TextStyles.togglebutton,
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                   AnimatedContainer(
                     duration: Duration(milliseconds: Values.durationMs),
@@ -54,7 +60,11 @@ class OnOffToggle extends StatelessWidget {
                         bottomRight: Radius.circular(Values.borderRadius),
                       ),
                     ),
-                    child: Text("Off"),
+                    child: Text(
+                      "Off",
+                      style: TextStyles.togglebutton,
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ],
               ),
@@ -77,6 +87,8 @@ class OnOffToggle extends StatelessWidget {
     color: enabled ? AppColors.accent : AppColors.pageBorderColor,
     width: enabled ? 2 : 1,
   );
+
+
 
 
 }

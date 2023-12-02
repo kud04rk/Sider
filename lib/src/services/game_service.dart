@@ -71,6 +71,7 @@ class GameService {
     // go to game routes to home page
     // popping first time to go back to pack selection screen
     // second time to go to main screen
-    AutoRouter.of(context).push(const HomeRoute());
+    // AutoRouter.of(context).popAndPush(const HomeRoute());
+    context.router.popUntil((route) => route.settings.name == 'HomeRoute');
   }
 }

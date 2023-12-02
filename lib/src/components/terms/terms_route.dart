@@ -5,6 +5,7 @@ import 'package:sider/src/utils/extensions.dart';
 import 'package:sider/src/components/core/scrollable_template.dart';
 
 import '../../constants/strings.dart';
+import '../../styles/text_styles.dart';
 
 
 @RoutePage()
@@ -17,7 +18,12 @@ class TermsRoute extends StatelessWidget {
       showBackButton: true,
       title: AppStrings.termsRouteTitle,
       children: <Widget>[
-        MarkdownBody(data: AppStrings.terms).sliver(),
+      MarkdownBody(
+      data: AppStrings.terms,
+      styleSheet: MarkdownStyleSheet(
+        p: TextStyles.settingExplanation,
+      ),
+    ).sliver(),
       ],
     ).scaffold();
   }

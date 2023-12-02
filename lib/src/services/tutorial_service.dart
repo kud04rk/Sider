@@ -44,13 +44,13 @@ class TutorialService {
     // go back home
 
     /*
-    Useing delayed because
+    Using delayed because
     (1) We cannot pop immediately because the card will still be animating
-    (2) There is a card at the end. The user will see it for a short perod of time,
+    (2) There is a card at the end. The user will see it for a short period of time,
     and we can put a thank you for viewing the tutorial message
     */
     Future.delayed(Duration(milliseconds: 500)).then((_) {
-          AutoRouter.of(context).pop(const HomeRoute());
+          context.router.popUntil((route) => route.settings.name == 'HomeRoute');
 
     });
   }

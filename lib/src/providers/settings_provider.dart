@@ -11,7 +11,7 @@ class SettingsProvider extends ChangeNotifier {
   loadSettings() {
     print("Loading settings ...");
     final settingsBox = Hive.box(HiveBoxes.settings);
-    nsfw = settingsBox.get(SettingsBox.nsfw, defaultValue: false);
+    nsfw = settingsBox.get(SettingsBox.nsfw, defaultValue: true);
 
     // if iphone, default for [highPerformanceAnimation] should be true
     bool defaultValue = true;
@@ -25,7 +25,7 @@ class SettingsProvider extends ChangeNotifier {
 class SettingsService {
   static var _settingsBox = Hive.box(HiveBoxes.settings);
 
-  // todo: refactor these functins and shorten them
+  // todo: refactor these functions and shorten them
   static enableNsfw() {
     _settingsBox.put(SettingsBox.nsfw, true);
   }

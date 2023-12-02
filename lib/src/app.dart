@@ -41,7 +41,6 @@ class App extends StatelessWidget {
             final settingsProvider =
             Provider.of<SettingsProvider>(context, listen: false);
             settingsProvider.loadSettings();
-            print("build app");
 
             return ScrollConfiguration(
               behavior: BounceScrollBehavior(),

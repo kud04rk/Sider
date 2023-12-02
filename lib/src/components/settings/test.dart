@@ -1,28 +1,24 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:provider/provider.dart';
+import 'package:sider/src/utils/extensions.dart';
 
 import '../../constants/strings.dart';
 import '../../providers/settings_provider.dart';
-import '../core/scrollable_template.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:sider/src/utils/extensions.dart';
 import '../../styles/text_styles.dart';
 import '../../styles/values.dart';
+import '../core/scrollable_template.dart';
 import 'on_off_toggle.dart';
 
-class SettingsRoute extends StatefulWidget {
+
+@RoutePage()
+class SettingsRoute extends StatelessWidget {
   const SettingsRoute({super.key});
 
   @override
-  State<SettingsRoute> createState() => _SettingsRouteState();
-
-}
-
-class _SettingsRouteState extends State<SettingsRoute> {
-
-
-  @override
   Widget build(BuildContext context) {
+    // not listening because Hive (and valueListenableBuilder) rebuilds everything for us
     SettingsProvider settingsProvider =
     Provider.of<SettingsProvider>(context, listen: false);
 
@@ -38,11 +34,10 @@ class _SettingsRouteState extends State<SettingsRoute> {
             Provider.of<SettingsProvider>(context, listen: false);
             if (settingsProvider.nsfw) {
               SettingsService.disableNsfw();
-              setState(() {});
 
             } else {
               SettingsService.enableNsfw();
-              setState(() {});
+              Navigator.pop(context);
             }
           },
         ).sliver(),
@@ -59,10 +54,8 @@ class _SettingsRouteState extends State<SettingsRoute> {
             Provider.of<SettingsProvider>(context, listen: false);
             if (settingsProvider.highPerformanceAnimation) {
               SettingsService.disableHighPerformanceAnimations();
-              setState(() {});
             } else {
               SettingsService.enableHighPerformanceAnimations();
-              setState(() {});
             }
           },
         ).sliver(),
@@ -73,6 +66,7 @@ class _SettingsRouteState extends State<SettingsRoute> {
       ],
     ).scaffold();
   }
+
   Widget explanation(String text) {
     return MarkdownBody(
       data: text,

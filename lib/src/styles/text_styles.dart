@@ -10,10 +10,10 @@ class TextStyles {
   /// App title
   static TextStyle get title => GoogleFonts.rubik(
     textStyle: TextStyle(
-      fontWeight: FontWeight.w900,
+      fontWeight: FontWeight.w700,
       fontSize: 2.0 * em,
       letterSpacing: 0.7,
-      color: Colors.white,
+      color: Colors.white70,
     ),
   );
 
@@ -49,7 +49,17 @@ class TextStyles {
       fontWeight: FontWeight.w700,
       letterSpacing: 0.8,
       fontSize: em,
-      color: Colors.white60,
+      color: Colors.white70,
+    ),
+  );
+
+  /// Text style for toggle button
+  static TextStyle get togglebutton => GoogleFonts.rubik(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.w300,
+      letterSpacing: 0.8,
+      fontSize: 0.8*em,
+      color: Colors.white70,
     ),
   );
 
@@ -77,6 +87,8 @@ class TextStyles {
       fontWeight: FontWeight.w500,
     ),
   );
+
+
 
   static TextStyle get loadingText => body1 //
       .w(FontWeight.w700)

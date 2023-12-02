@@ -11,10 +11,10 @@ class AppTitle extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         // un comment to show logo
-        // Image.asset(
-        //   'icons/android.png',
-        //   scale: 7.5,
-        // ),
+        Image.asset(
+          'icons/android.png',
+          scale: 7.5,
+        ),
 
         // App name (Shots)
         Text(
