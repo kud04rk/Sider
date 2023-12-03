@@ -6,6 +6,7 @@ import '../constants/hive_strings.dart';
 
 class SettingsProvider extends ChangeNotifier {
   late bool nsfw;
+  late bool acceptTerms;
   late bool highPerformanceAnimation;
 
   loadSettings() {
@@ -17,6 +18,10 @@ class SettingsProvider extends ChangeNotifier {
     bool defaultValue = true;
     highPerformanceAnimation =
         settingsBox.get(SettingsBox.highPerformanceAnimation, defaultValue: defaultValue);
+
+
+    acceptTerms =
+        settingsBox.get(SettingsBox.acceptTerms, defaultValue: false);
   }
 
 
@@ -28,6 +33,10 @@ class SettingsService {
   // todo: refactor these functions and shorten them
   static enableNsfw() {
     _settingsBox.put(SettingsBox.nsfw, true);
+  }
+
+  static acceptTerms() {
+    _settingsBox.put(SettingsBox.acceptTerms, true);
   }
 
   static disableNsfw() {

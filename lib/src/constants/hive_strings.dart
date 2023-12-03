@@ -9,6 +9,7 @@ class HiveBoxes {
 class SettingsBox {
   static String get nsfw => "nsfw";
   static String get highPerformanceAnimation => "high_performance_animations";
+  static String get acceptTerms => "terms_accepted";
 }
 
 

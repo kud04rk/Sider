@@ -5,6 +5,7 @@ class AppStrings {
   static String get termsRouteButton => "Terms";
   static String get settingsRouteButton => "Settings";
   static String get tutorialButton => "Tutorial";
+  static String get acceptTerms => "Accept Terms";
 
   static String get packsRouteTitle => "Choose packs";
   static String get selectAllButton => "Select all";

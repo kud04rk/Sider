@@ -2,7 +2,9 @@ import 'dart:math';
 
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../../constants/strings.dart';
+import '../../providers/settings_provider.dart';
 import '../../router/router.gr.dart';
 import '../../services/tutorial_service.dart';
 import '../../styles/colors.dart';
@@ -15,15 +17,26 @@ import '../core/spacing.dart';
 class HomeOptions extends StatelessWidget {
   const HomeOptions({Key? key}) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
+
+    SettingsProvider settingsProvider =
+    Provider.of<SettingsProvider>(context, listen: false);
+    if (settingsProvider.acceptTerms) {
+      debugPrint("Settings loaded");
+    } else {
+          AutoRouter.of(context).push(const TermsRoute());
+    }
+
+
     return Padding(
       padding: EdgeInsets.all(Values.mainPadding),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         // crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          // start button (takes to pack selesction first)
+          // start button (takes to pack selection first)
           Button(
             text: AppStrings.startButton,
             color: AppColors.accent,

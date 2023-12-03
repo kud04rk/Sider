@@ -10,7 +10,7 @@ class AppRouter extends $AppRouter {
   @override
   // TODO: implement routes
   List<AutoRoute> get routes => [
-    AutoRoute(page: HomeRoute.page, initial: true),
+    AutoRoute(page: HomeRoute.page,initial: true),
     AutoRoute(page: GameRoute.page),
     AutoRoute(page: TermsRoute.page),
     AutoRoute(page: SettingsRoute.page),
