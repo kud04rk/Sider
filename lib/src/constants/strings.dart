@@ -31,7 +31,7 @@ By playing the game, you agree to the following terms:
 - You will not force anyone to drink
 - You will not play for prolonged periods of time or consume excessive alcohol
 
-The creators of the Shots app will not be held liable for any damage or injury occuring during or after playing the game.
+The creators of the this app will not be held liable for any damage or injury occuring during or after playing the game.
 
 """;
 
